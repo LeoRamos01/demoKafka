@@ -21,19 +21,19 @@ public class KafkaProducer {
 
 	@PostConstruct
 	public void sendSomeMessages() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 100; i < 110; i++) {
 			sendMessage(String.format("Mensagem %d", i));
 		}
 		
-		sendMessageSimple("messageFromSimpleMethod");
+		sendMessageSimple("messageFromSimpleMethodsgayhs");
 	}
 	
 	public void sendMessageSimple(String message) {
-	    kafkaTemplate.send("pastel", message);
+	    kafkaTemplate.send("banana", message);
 	}
 
 	public void sendMessage(String message) {
-		ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send("pastel", message);
+		ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send("laranja", message);
 
 		future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
 
