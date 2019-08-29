@@ -5,7 +5,7 @@ Projeto simples com producer/consumer que gera algumas mensagens num tópico.
 # Rodando o Kafka
 
 ```sh
-docker compose up -d
+docker-compose up -d
 ```
 
 # Create topic
