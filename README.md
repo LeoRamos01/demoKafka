@@ -27,3 +27,6 @@ docker exec -it meu_kafka_kafka_1 kafka-console-producer.sh --broker-list localh
 ```sh
 docker exec -it meu_kafka_kafka_1 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic pastel --from-beginning
 ```
+# Como usar
+
+http://localhost:8080/swagger-ui.html
