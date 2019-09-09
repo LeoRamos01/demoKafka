@@ -46,5 +46,5 @@ public class TriggerController {
 	public String getMetrics () {
 		return metrics.getMetrics();
 	}
-	
+
 }

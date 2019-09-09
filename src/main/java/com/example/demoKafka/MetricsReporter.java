@@ -37,11 +37,11 @@ public class MetricsReporter {
 
 			metrics.forEach((clientid, metricMap) -> {
 				
-				sb.append("------------------------For client id : " + clientid + LINE_BREAK);
+				sb.append("------------------------ For client id : " + clientid + LINE_BREAK);
 				
 				metricMap.forEach((metricName, metricValue) -> {
 					
-					sb.append("------------Metric name: " + metricName.name() + "-----------Metric value: "
+					sb.append("------------ Metric name: " + metricName.name() + " ----------- Metric value: "
 							+ metricValue.metricValue() + LINE_BREAK);
 					
 				});
