@@ -12,7 +12,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
  *
  */
 @Component
-public class KafkaProducer {
+public class Sender {
 
 	@Autowired
 	private KafkaTemplate<String, Person> kafkaTemplate;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class KafkaConsumer {
+public class Receiver {
 
 	@KafkaListener(topics = { "maca3" }, groupId = "grupo1")
 	public void listen(Person person) {
