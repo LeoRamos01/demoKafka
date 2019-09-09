@@ -1,7 +1,5 @@
 package com.example.demoKafka;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
@@ -19,16 +17,9 @@ public class KafkaProducer {
 	@Autowired
 	private KafkaTemplate<String, Person> kafkaTemplate;
 
-	@PostConstruct
-	public void sendSomeMessages() {
-		for (Integer i = 20; i < 30; i++) {
-			sendMessage(new Person(i, "nomeCliente" + i));
-		}
-	}
-
 	public void sendMessage(Person person) {
 
-		ListenableFuture<SendResult<String, Person>> future = kafkaTemplate.send("laranja", person);
+		ListenableFuture<SendResult<String, Person>> future = kafkaTemplate.send("maca3", person);
 
 		future.addCallback(new ListenableFutureCallback<SendResult<String, Person>>() {
 
